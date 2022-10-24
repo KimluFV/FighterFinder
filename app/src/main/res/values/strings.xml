@@ -21,4 +21,9 @@
     <string name="altura">Altura</string>
     <string name="opcional">(opcional)</string>
     <string name="peso">Peso</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="edad">Edad</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="registrar">Registrar</string>
 </resources>
