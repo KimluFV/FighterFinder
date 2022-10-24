@@ -1,5 +1,10 @@
 package com.example.elmapa
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+@Entity(tableName = "Luchador")
 class Luchador(
     val nombre:String,
     val apellido:String,
@@ -8,5 +13,7 @@ class Luchador(
     val telefono:Int,
     val nombreusuario:String,
     val contraseña:String,
-    var idLuchador: Int
-)
+
+    @PrimaryKey(autoGenerate = true)
+    var idLuchador: Int = 0):java.io.Serializable
+
