@@ -8,9 +8,9 @@ import androidx.room.PrimaryKey
 class Luchador(
     val nombre:String,
     val apellido:String,
-    val edad:Int,
-    val altura:Int,
-    val telefono:Int,
+    val edad:String,
+    val altura:String,
+    val telefono:String,
     val nombreusuario:String,
     val contraseña:String,
 

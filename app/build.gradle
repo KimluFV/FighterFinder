@@ -36,6 +36,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'com.example.elmapa'
 }
 
 dependencies {
@@ -50,9 +51,12 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    implementation('androidx.room:room-runtime:2.4.3')
-    implementation('androidx.room:room-ktx:2.4.3')
-    kapt("androidx.room:room-compiler:2.4.3")
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    def room_version = "2.4.3"
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
