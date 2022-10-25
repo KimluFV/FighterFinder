@@ -15,6 +15,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.example.elmapa.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
+
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowCloseListener;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowLongClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
@@ -25,7 +26,7 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 
 
-class PeleasMapa : AppCompatActivity(),OnMarkerClickListener, OnInfoWindowClickListener, OnMapReadyCallback {
+class PeleasMapa : AppCompatActivity(),OnMarkerClickListener, OnInfoWindowClickListener, OnMapReadyCallback,GoogleMap.OnMapClickListener {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
@@ -70,6 +71,7 @@ class PeleasMapa : AppCompatActivity(),OnMarkerClickListener, OnInfoWindowClickL
 
         mMap.setOnMarkerClickListener(this)
         mMap.setOnInfoWindowClickListener(this)
+        mMap.setOnMapClickListener(this)
 
         }
     override fun onMarkerClick(marker: Marker): Boolean {
@@ -82,4 +84,15 @@ class PeleasMapa : AppCompatActivity(),OnMarkerClickListener, OnInfoWindowClickL
         val intent = Intent(this, Luchadorvista::class.java)
         startActivity(intent)
     }
+
+    override fun onMapClick(p0: LatLng) {
+        mMap.clear()
+        mMap.addMarker(
+            MarkerOptions()
+                .position(p0)
+                .title("Nueva pelea")
+        )
+
+        }
+
     }
