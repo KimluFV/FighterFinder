@@ -63,6 +63,7 @@ class PeleasMapa : AppCompatActivity(),OnMarkerClickListener, OnInfoWindowClickL
                 .position(sanantonio)
                 .snippet("Luis Enrique, campeon mundial con 352 victorias por K.O")
                 .title("Pelea en San Antonio")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.icono_round))
         )
 
 
@@ -91,6 +92,7 @@ class PeleasMapa : AppCompatActivity(),OnMarkerClickListener, OnInfoWindowClickL
             MarkerOptions()
                 .position(p0)
                 .title("Nueva pelea")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.icono_round))
         )
 
         }
