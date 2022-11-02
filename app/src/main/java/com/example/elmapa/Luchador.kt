@@ -13,6 +13,7 @@ class Luchador(
     val telefono:String,
     val nombreusuario:String,
     val contraseña:String,
+    val imagen:String,
 
     @PrimaryKey(autoGenerate = true)
     var idLuchador: Int = 0):java.io.Serializable

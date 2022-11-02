@@ -27,4 +27,6 @@
     <string name="apellido">Apellido</string>
     <string name="registrar">Registrar</string>
     <string name="nombre_usuario">Nombre Usuario</string>
+    <string name="pelear">A pelear</string>
+
 </resources>

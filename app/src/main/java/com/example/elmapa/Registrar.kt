@@ -34,7 +34,8 @@ class Registrar : AppCompatActivity() {
         val nombreUsuario = edtxt_regNombreusuario.text.toString()
         val contraseña = edtxt_regContraseña.text.toString()
 
-        val luchador = Luchador(nombre, apellido,edad,altura,telefono,nombreUsuario,contraseña)
+
+        val luchador = Luchador(nombre, apellido,edad,altura,telefono,nombreUsuario,contraseña,"https://www.flaticon.es/icono-gratis/usuario_5368662?term=profile&page=1&position=67&page=1&position=67&related_id=5368662&origin=search")
         CoroutineScope(Dispatchers.IO).launch {
             val id = bd.Luchadores().insertarLuchador(luchador)[0]
             this@Registrar.finish()
